@@ -29,13 +29,14 @@ xhr.onreadystatechange = function () {
     has_result = false
   }else{
     alert("failed to Xfy!")
-    location.reload()
+    setTimeout('location.reload()', 5000);
+
   }
 };
 
 if (has_result == false){
   alert("couldn't find the address!")
-  location.reload()
+  setTimeout('location.reload()', 5000);
 }
 
 
