@@ -9,4 +9,7 @@ Let's 𝕏fy the location you love.
 
     https://gojiteji.github.io/Xfy-Anywhere/
 
+    The reason why the site asks you to enter your Google Maps API key is because individuals will quickly run out of quota for the Map Tiles API & Geocoding API.
+There is no intention to collect them.
+
     If you don't want to paste your API key to my website, you can also fork this project and host on your own GitHub Pages and change `HOST_URL` to your one.
