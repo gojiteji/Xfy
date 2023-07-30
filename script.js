@@ -3,6 +3,10 @@ Address = window.prompt("Where do you wanna Xfy?", "Twitter HQ, San Francisco, C
 height = window.prompt("How high do you wanna bump X up to? (meter)", "22")
 height = parseFloat(height);
 
+
+const ICON_MAPPING = {
+  marker: {x: 0, y: 0, width: 300, height: 300, mask: true}
+};
 const HOST_URL = "https://gojiteji.github.io/"
 
 
