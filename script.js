@@ -6,8 +6,10 @@ const HOST_URL = "https://gojiteji.github.io/"
 const TILESET_URL = `https://tile.googleapis.com/v1/3dtiles/root.json`;
 const BUILDINGS_URL = 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/google-3d-tiles/buildings.geojson'
 
-Address = window.prompt("Where do you wanna Xfy?","Twitter HQ, San Francisco, CA")
+Address = window.prompt("Where do you wanna Xfy?","San Francisco, CA 94103")
 
+var lat = 0
+var lng = 0
 var xhr = new XMLHttpRequest();
 var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + Address + "&key=" + GOOGLE_API_KEY
 xhr.open("GET", url, true);
@@ -15,6 +17,7 @@ xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var json = JSON.parse(xhr.responseText);
         console.log(json);
+        var lat = json.results[0].geometry.location.lat;
     }else{
         alert("failed to Xfy!")
         console.log(url)
@@ -27,8 +30,8 @@ const creditsElement = document.getElementById('credits');
 const deckgl = new deck.DeckGL({
   container: 'map',
   initialViewState: {
-    latitude: 50.0890,
-    longitude: 14.4196,
+    latitude: lat,
+    longitude: long,
     zoom: 32,
     bearing: 90,
     pitch: 60,
