@@ -20,16 +20,15 @@ var has_result = false
 xhr.onreadystatechange = function () {
   var json = JSON.parse(xhr.responseText);
   if (json.status === "OK") {
-    console.log(json);
     lat = json.results[0].geometry.location.lat;
     lng = json.results[0].geometry.location.lng;
+    console.log(lat,lng)
     has_result = true
   }
   else if(json.status === "ZERO_RESULTS"){
     has_result = false
   }else{
     alert("failed to Xfy!")
-    console.log(url)
     location.reload()
   }
 };
