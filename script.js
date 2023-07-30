@@ -17,8 +17,8 @@ xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var json = JSON.parse(xhr.responseText);
         console.log(json);
-        var lat = json.results[0].geometry.location.lat;
-        var lng = json.results[0].geometry.location.lng;
+        lat = json.results[0].geometry.location.lat;
+        lng = json.results[0].geometry.location.lng;
     }else{
         alert("failed to Xfy!")
         console.log(url)
@@ -32,7 +32,7 @@ const deckgl = new deck.DeckGL({
   container: 'map',
   initialViewState: {
     latitude: lat,
-    longitude: long,
+    longitude: lg,
     zoom: 32,
     bearing: 90,
     pitch: 60,
