@@ -14,7 +14,7 @@ var xhr = new XMLHttpRequest();
 var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + Address + "&key=" + GOOGLE_API_KEY
 xhr.open("GET", url, true);
 xhr.onreadystatechange = function () {
-    if (xhr.status === 200) {
+    if (xhr.status === "OK") {
         var json = JSON.parse(xhr.responseText);
         console.log(json);
         lat = json.results[0].geometry.location.lat;
