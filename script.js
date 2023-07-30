@@ -1,5 +1,5 @@
 const GOOGLE_API_KEY = window.prompt("Set your API key\n(Please allow Map Tiles and Geocoding API)","")
-
+const HOST_URL = "https://gojiteji.github.io/"
 
 
 
