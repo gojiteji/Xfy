@@ -9,7 +9,7 @@ const BUILDINGS_URL = 'https://raw.githubusercontent.com/visgl/deck.gl-data/mast
 Address = window.prompt("Where do you wanna Xfy?","Twitter HQ, San Francisco, CA")
 
 var xhr = new XMLHttpRequest();
-var url = "https://maps.googleapis.com/maps/api/geocode/json?components=" + Address + "&key=" + GOOGLE_API_KEY
+var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + Address + "&key=" + GOOGLE_API_KEY
 xhr.open("GET", url, true);
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
