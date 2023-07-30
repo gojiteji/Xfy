@@ -14,7 +14,6 @@ var xhr = new XMLHttpRequest();
 var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + Address + "&key=" + GOOGLE_API_KEY
 xhr.open("GET", url, true);
 
-// fix sending problem
 //set object
 xhr.onreadystatechange = function () {
   var json = JSON.parse(xhr.responseText);
@@ -57,6 +56,20 @@ xhr.onreadystatechange = function () {
             }
           },
           operation: 'terrain+draw'
+        })
+        ,
+        new deck.IconLayer({
+          id: 'icon-layer',
+          data,
+          pickable: true,
+          iconAtlas: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/icon-atlas.png',
+          iconMapping: ICON_MAPPING,
+          getIcon: d => 'marker',
+      
+          sizeScale: 15,
+          getPosition: d => d.coordinates,
+          getSize: d => 5,
+          getColor: d => [Math.sqrt(d.exits), 140, 0]
         })
       ]
     });
