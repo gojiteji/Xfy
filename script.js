@@ -6,7 +6,7 @@ const HOST_URL = "https://gojiteji.github.io/"
 const TILESET_URL = `https://tile.googleapis.com/v1/3dtiles/root.json`;
 const BUILDINGS_URL = 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/google-3d-tiles/buildings.geojson'
 
-Address = window.prompt("Where do you wanna Xfy?","San Francisco, CA 94103")
+Address = window.prompt("Where do you wanna Xfy?","Twitter HQ, San Francisco, CA, USA")
 
 var lat = 0
 var lng = 0
