@@ -33,6 +33,7 @@ xhr.onreadystatechange = function () {
 
   }
 };
+xhr.send();
 
 if (has_result == false){
   alert("couldn't find the address!")
