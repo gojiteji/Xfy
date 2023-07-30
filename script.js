@@ -9,8 +9,7 @@ const creditsElement = document.getElementById('credits');
 
 Address = window.prompt("Where do you wanna Xfy?","Twitter HQ, San Francisco, CA, USA")
 
-var lat = 0
-var lng = 0
+
 var xhr = new XMLHttpRequest();
 var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + Address + "&key=" + GOOGLE_API_KEY
 xhr.open("GET", url, true);
@@ -21,8 +20,8 @@ xhr.onreadystatechange = function () {
   var json = JSON.parse(xhr.responseText);
   if (json.status === "OK") {
     console.log("scucessfully Xfy!")
-    lat = json.results[0].geometry.location.lat;
-    lng = json.results[0].geometry.location.lng;
+    var lat = json.results[0].geometry.location.lat;
+    var lng = json.results[0].geometry.location.lng;
     console.log(lat,lng)
     const deckgl = new deck.DeckGL({
       container: 'map',
