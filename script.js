@@ -11,7 +11,6 @@ Address = window.prompt("Where do you wanna Xfy?","Twitter HQ, San Francisco, CA
 var xhr = new XMLHttpRequest();
 var url = "https://maps.googleapis.com/maps/api/geocode/json?components=" + Address + "&key=" + GOOGLE_API_KEY
 xhr.open("GET", url, true);
-xhr.setRequestHeader("Origin", HOST_URL);
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         var json = JSON.parse(xhr.responseText);
