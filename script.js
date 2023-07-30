@@ -18,6 +18,7 @@ xhr.onreadystatechange = function () {
         var json = JSON.parse(xhr.responseText);
         console.log(json);
         var lat = json.results[0].geometry.location.lat;
+        var lng = json.results[0].geometry.location.lng;
     }else{
         alert("failed to Xfy!")
         console.log(url)
