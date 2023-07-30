@@ -1,0 +1,28 @@
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 20, 0.75); 
+    pointer-events: none;
+    z-index: 1; 
+  }
+
+  @keyframes changeBackground {
+    0% { background-color: rgba(0, 0, 20, 0.75); z-index: 10000; }
+    84% { background-color: rgba(0, 0, 20, 0.75);  z-index: 10000; }
+    86% { background-color: rgba(0, 0, 10, 0.1);  z-index: 10000; }
+    88% { background-color: rgba(0, 0, 20, 0.75);  z-index: 10000; }
+    90% { background-color: rgba(0, 0, 20, 0.75);  z-index: 10000; }
+    92% { background-color: rgba(0, 0, 10, 0.1);  z-index: 10000; }
+    94% { background-color: rgba(0, 0, 20, 0.75);  z-index: 10000; }
+    96% { background-color: rgba(0, 0, 20, 0.75);  z-index: 10000; }
+    98% { background-color: rgba(0, 0, 10, 0.1);  z-index: 10000; }
+    100% { background-color: rgba(0, 0, 20, 0.75);  z-index: 10000; }
+  }
+
+  .animated-element {
+    animation: changeBackground 4s infinite;
+  }
