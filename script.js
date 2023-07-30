@@ -14,15 +14,15 @@ var xhr = new XMLHttpRequest();
 var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + Address + "&key=" + GOOGLE_API_KEY
 xhr.open("GET", url, true);
 xhr.onreadystatechange = function () {
-    if (xhr.status === "OK") {
-        var json = JSON.parse(xhr.responseText);
-        console.log(json);
-        lat = json.results[0].geometry.location.lat;
-        lng = json.results[0].geometry.location.lng;
-    }else{
-        alert("failed to Xfy!")
-        console.log(url)
-    }
+  var json = JSON.parse(xhr.responseText);
+  if (json.status === "OK") {
+    console.log(json);
+    lat = json.results[0].geometry.location.lat;
+    lng = json.results[0].geometry.location.lng;
+  }else{
+    alert("failed to Xfy!")
+    console.log(url)
+  }
 };
 xhr.send();
 
