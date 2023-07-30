@@ -1,5 +1,6 @@
 const GOOGLE_API_KEY = window.prompt("Set your API key\n(Please allow Map Tiles and Geocoding API)", "")
-const height = window.prompt("How high do you wanna bump X up to? (meter)", "22")
+Address = window.prompt("Where do you wanna Xfy?", "Twitter HQ, San Francisco, CA, USA")
+height = window.prompt("How high do you wanna bump X up to? (meter)", "22")
 height = parseFloat(height);
 
 const HOST_URL = "https://gojiteji.github.io/"
@@ -10,7 +11,6 @@ const TILESET_URL = `https://tile.googleapis.com/v1/3dtiles/root.json`;
 const BUILDINGS_URL = 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/google-3d-tiles/buildings.geojson'
 const creditsElement = document.getElementById('credits');
 
-Address = window.prompt("Where do you wanna Xfy?", "Twitter HQ, San Francisco, CA, USA")
 
 
 var xhr = new XMLHttpRequest();
