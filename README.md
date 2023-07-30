@@ -1,1 +1,1 @@
-# Xfy Anywhere
+# Xfy
