@@ -32,7 +32,7 @@ const deckgl = new deck.DeckGL({
   container: 'map',
   initialViewState: {
     latitude: lat,
-    longitude: lg,
+    longitude: lng,
     zoom: 32,
     bearing: 90,
     pitch: 60,
