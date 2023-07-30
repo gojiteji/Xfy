@@ -27,19 +27,16 @@ xhr.onreadystatechange = function () {
     has_result = true
   }
   else if(json.status === "ZERO_RESULTS"){
-    has_result = false
-  }else{
+    alert("couldn't find the address!")
+    setTimeout('location.reload()', 5000);
+    }else{
     alert("failed to Xfy!")
     setTimeout('location.reload()', 5000);
 
   }
 };
-xhr.send();
 
-if (has_result == false){
-  alert("couldn't find the address!")
-  setTimeout('location.reload()', 5000);
-}
+xhr.send();
 
 
 const creditsElement = document.getElementById('credits');
