@@ -28,7 +28,7 @@ xhr.onreadystatechange = function () {
       initialViewState: {
         latitude: lat,
         longitude: lng,
-        zoom: 20,
+        zoom: 19,
         bearing: 90,
         pitch: 60,
         height: 200
